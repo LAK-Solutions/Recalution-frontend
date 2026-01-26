@@ -1,9 +1,12 @@
 ## ADR Index
 - ADR-001 Frontend split: Vite SPA at `/app`, SSG at `/`
+- ADR-002 Styling choice: Vanilla CSS
 
 ---
 
 ## ADR-001 — Frontend split: `/app` SPA + `/` SSG
+
+Date: 2026-01-18
 
 ### Decision
 - `/app` is a Vite-based SPA.
@@ -18,3 +21,17 @@
 
 ---
 
+## ADR-002 — Styling choice: Vanilla CSS
+
+Date: 2026-01-23
+
+### Decision
+- Use vanilla CSS as the primary styling solution.
+
+### Reason
+
+- Modern CSS provides a stable and capable foundation for efficient development, removing the necessity for additional styling frameworks or preprocessors.
+
+### Alternatives considered
+- Tailwind CSS → rejected: Not considered future-proof due to the current financial and strategic uncertainty of the Tailwind CSS project.
+- SCSS → rejected: Adds complexity without providing sufficient benefits over modern, native CSS capabilities.

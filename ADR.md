@@ -41,3 +41,20 @@ Date: 2026-01-23
 
 - Tailwind CSS → rejected: Not considered future-proof due to the current financial and strategic uncertainty of the Tailwind CSS project.
 - SCSS → rejected: Adds complexity without providing sufficient benefits over modern, native CSS capabilities.
+
+---
+
+## ADR-003 — Component Library Choice: MUI
+
+Date: 2026-02-13
+
+## Decision
+- Use MUI as the major React component library.
+
+## Reason
+- MUI allows us to build the application quickly using ready-made React components, without focusing on custom design at this stage.
+- Its modern and standardized design, created by the MUI team, ensures the interface will be generally familiar and visually acceptable to most users.
+
+## Other Considerations
+- We reviewed other React component libraries, but none offered clear advantages over MUI.
+- MUI has a vast collection of components, is easy to use, and has strong backing for continued development.

@@ -3,6 +3,11 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
+// MUI Components
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,6 +22,14 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <Container style={{ marginTop: 40 }}>
+        <Typography variant="h4" gutterBottom>
+          Hello MUI
+        </Typography>
+        <Button variant="contained" color="primary">
+          Click Me
+        </Button>
+      </Container>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>

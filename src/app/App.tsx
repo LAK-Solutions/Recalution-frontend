@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Login from './pages/LoginPage';
 import DecksPage from './pages/DeckPage';
@@ -23,6 +23,7 @@ function App() {
       </nav>
 
       <Routes>
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/decks" element={<DecksPage />} />
       </Routes>

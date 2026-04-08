@@ -28,15 +28,15 @@ export default function CreateNewDeckPage() {
   function updateCard(index: number, field: keyof Card, value: string) {
     setCards((currentCards) =>
       currentCards.map((card, cardIndex) =>
-        cardIndex === index ? { ...card, [field]: value } : card
-      )
+        cardIndex === index ? { ...card, [field]: value } : card,
+      ),
     );
   }
 
   async function createDeck() {
     const trimmedName = name.trim();
     const validCards = cards.filter(
-      (card) => card.question.trim() !== '' && card.answer.trim() !== ''
+      (card) => card.question.trim() !== '' && card.answer.trim() !== '',
     );
     const token = localStorage.getItem('token');
 
@@ -63,7 +63,7 @@ export default function CreateNewDeckPage() {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ name: trimmedName, cards: validCards })
+      body: JSON.stringify({ name: trimmedName, cards: validCards }),
     });
 
     if (!response.ok) {

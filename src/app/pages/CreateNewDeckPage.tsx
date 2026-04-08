@@ -1,13 +1,22 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type Card = {
   question: string;
   answer: string;
 };
 
+type CreateDeckResponse = {
+  deck: {
+    id: string;
+    name: string;
+  };
+};
+
 const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function CreateNewDeckPage() {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [cards, setCards] = useState<Card[]>([{ question: '', answer: '' }]);
   const [errorMessage, setErrorMessage] = useState('');
@@ -62,8 +71,8 @@ export default function CreateNewDeckPage() {
       return;
     }
 
-    const data = await response.json();
-    console.log(data);
+    const data = (await response.json()) as CreateDeckResponse;
+    navigate(`/decks/${data.deck.id}`, { state: { deckName: data.deck.name } });
   }
 
   return (

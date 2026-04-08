@@ -7,6 +7,8 @@ import DecksPage from './pages/DeckPage';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import CreateNewDeckPage from './pages/CreateNewDeckPage';
+import DeckDetailsPage from './pages/DeckDetailsPage';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
         <Route path="/decks" element={<DecksPage />} />
+        <Route path="/decks/:deckId" element={<DeckDetailsPage />} />
+        <Route path="/create-new-deck" element={<CreateNewDeckPage />} />
       </Routes>
 
       <Container style={{ marginTop: 40 }}>

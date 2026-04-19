@@ -88,7 +88,7 @@ export default function DeckPage() {
         decks.map((deck) => (
           <div
             key={deck.id}
-            onClick={() => navigate(`/decks/${deck.id}`, { state: { deckName: deck.name } })}
+            onClick={() => navigate(`/decks/${deck.id}`)}
             style={{ cursor: 'pointer' }}
           >
             <h2>{deck.name}</h2>

@@ -9,7 +9,6 @@ type Card = {
 type CreateDeckResponse = {
   deck: {
     id: string;
-    name: string;
   };
 };
 
@@ -72,7 +71,7 @@ export default function CreateNewDeckPage() {
     }
 
     const data = (await response.json()) as CreateDeckResponse;
-    navigate(`/decks/${data.deck.id}`, { state: { deckName: data.deck.name } });
+    navigate(`/decks/${data.deck.id}`);
   }
 
   return (

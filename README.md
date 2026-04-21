@@ -4,6 +4,7 @@ This repository is responsible for the web client of Recalution.
 For a full description of the product vision and goals, see:
 - Project overview: [LINK_TO_MAIN_PROJECT_DOCS](https://docs.google.com/document/d/1rVIXDW3yb_tYRrazl4toEDbBXGfARA6R96kuV3lunlY/edit?tab=t.0)
 
+<<<<<<< Updated upstream
 ## Getting Started
 
 ## Contributing
@@ -44,3 +45,44 @@ git checkout -b issue-12/add-transaction-crud
 ```
 4. Push the branch and open a Pull Request linking the issue (e.g., `Closes #12`).
 5. Wait for review and approval before merging.
+=======
+## Prerequisites
+
+- Node.js and npm installed locally.
+- The Recalution backend API running and reachable from the frontend.
+- A `.env` file with the API base URL configured, for example:
+
+```env
+VITE_API_URL=<your-backend-api-url>
+```
+
+This value is application configuration, not a secret. Keep real credentials and tokens out of the repository.
+
+## Getting Started
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create a `.env` file in the project root if it does not already exist, and set the API base URL:
+
+```env
+VITE_API_URL=<your-backend-api-url>
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+### Useful Scripts
+
+- `npm run build` - type-check and create a production build
+- `npm run lint` - run ESLint
+- `npm run preview` - preview the production build locally
+- `npm run format` - format the codebase with Prettier
+- `npm run format:check` - verify formatting without changing files
+>>>>>>> Stashed changes

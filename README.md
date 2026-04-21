@@ -7,14 +7,7 @@ For a full description of the product vision and goals, see:
 ## Prerequisites
 
 - Node.js and npm installed locally.
-- The Recalution backend API running and reachable from the frontend.
-- A `.env` file with the API base URL configured, for example:
-
-```env
-VITE_API_URL=<your-backend-api-url>
-```
-
-This value is application configuration, not a secret. Keep real credentials and tokens out of the repository.
+- A `.env` file with the API base URL configured.
 
 ## Getting Started
 
